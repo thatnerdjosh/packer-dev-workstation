@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  workspace:
+    image: omnidapps/dev-workstation:fedora-29
+    volumes:
+      - dev-home:/home/jsantos
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.ssh:/home/jsantos/.ssh
+      - ~/development:/home/jsantos/develop
+    restart: always 
+    stdin_open: true
+    tty: yes
+volumes:
+  dev-home:
